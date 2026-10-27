@@ -1,0 +1,311 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #0b1020;
+  color: #edf2ff;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px 24px;
+  background: rgba(14, 165, 233, 0.18);
+  border: 1px solid rgba(14, 165, 233, 0.55);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  color: #edf2ff;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.logo h1 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.04em;
+}
+
+.logo p {
+  max-width: 900px;
+  margin: 14px 0 0;
+  color: #cbd5e1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-links a {
+  padding: 10px 18px;
+  border: 1px solid rgba(203, 213, 225, 0.2);
+  border-radius: 999px;
+  color: #edf2ff;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+.nav-links a:hover, .nav-links a:focus-visible {
+  background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+  color: #edf2ff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 16px rgba(14, 165, 233, 0.25);
+}
+
+.card {
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+  flex: 1;
+  min-width: 250px;
+}
+.card h3 {
+  margin-top: 0;
+  color: #edf2ff;
+}
+.card p {
+  margin-bottom: 0;
+}
+
+#about a[href="https://guns.lol/lulu_mii"] {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #7dd3fc;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+#about a[href="https://guns.lol/lulu_mii"]:hover,
+#about a[href="https://guns.lol/lulu_mii"]:focus-visible {
+  color: #fff;
+  background-color: rgba(14, 165, 233, 0.35);
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  color: #edf2ff;
+  background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-primary:hover, .btn-primary:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(14, 165, 233, 0.3);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 44px 28px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.35), rgba(139, 92, 246, 0.25));
+}
+.hero h2 {
+  max-width: 900px;
+  margin-bottom: 14px;
+  color: #edf2ff;
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+}
+.hero p {
+  max-width: 720px;
+  text-align: center;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-areas: "main";
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+.page-layout > main {
+  grid-area: main;
+  min-width: 0;
+}
+
+.cards-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.api-section {
+  display: grid;
+  gap: 20px;
+  max-width: 760px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.api-section > h2 {
+  margin-bottom: 0;
+}
+
+.api-card {
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.45);
+}
+
+.api-card h3 {
+  margin-bottom: 12px;
+}
+
+.users-list {
+  display: grid;
+  gap: 8px;
+  padding-left: 24px;
+}
+
+#post-form {
+  display: grid;
+  gap: 10px;
+}
+
+#post-form input,
+#post-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  color: #edf2ff;
+  background: rgba(11, 16, 32, 0.8);
+  border: 1px solid rgba(203, 213, 225, 0.4);
+  border-radius: 8px;
+}
+
+#post-form textarea {
+  resize: vertical;
+}
+
+#post-form .btn-primary {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+}
+
+#post-form .btn-primary:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 56px 24px 24px;
+}
+
+.site-main {
+  padding: 30px 24px 40px;
+}
+
+.site-footer {
+  padding: 28px 24px 40px;
+}
+
+@media (min-width: 768px) {
+  .page-layout {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+  .sidebar {
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .nav-links {
+    justify-content: flex-start;
+  }
+  .site-header {
+    padding-top: 28px;
+  }
+}
+@media (orientation: landscape) and (max-width: 768px) {
+  .hero {
+    min-height: 220px;
+    padding: 28px 16px;
+  }
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+}

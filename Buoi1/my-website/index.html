@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phan Trọng Hiển | Trang cá nhân và mục tiêu học tập</title>
+    <meta name="description" content="Khám phá trang cá nhân của Phan Trọng Hiển, sinh viên Kỹ thuật phần mềm, cùng thông tin học tập, mục tiêu phát triển và kỹ năng công nghệ." />
+    <meta property="og:title" content="Phan Trọng Hiển | Trang cá nhân" />
+    <meta property="og:description" content="Khám phá thông tin cá nhân, mục tiêu học tập và kỹ năng công nghệ của Phan Trọng Hiển." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h1>Phan Trọng Hiển</h1>
+          <p>Tôi là sinh viên năm 2 ngành Kỹ thuật phần mềm, đang tìm hiểu và phát triển bản thân qua các môn học cũng như kỹ năng mềm.</p>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <a href="contact.html">Liên hệ</a>
+          <a href="https://github.com/PhnHin/my-website" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Chào mừng đến với trang cá nhân của Phan Trọng Hiển</h2>
+        <p>Khám phá thông tin học tập, mục tiêu phát triển và kỹ năng công nghệ của tôi.</p>
+        <a class="btn-primary" href="about.html">Tìm hiểu thêm</a>
+      </section>
+
+      <div class="cards-grid">
+        <div class="card">
+          <h3>Kỹ năng phát triển</h3>
+          <p>Học HTML, CSS, JavaScript và Git để xây dựng website hiệu quả.</p>
+        </div>
+        <div class="card">
+          <h3>Mục tiêu học tập</h3>
+          <p>Hoàn thành các môn học và duy trì thành tích tốt trong quá trình học.</p>
+        </div>
+        <div class="card">
+          <h3>Liên hệ và hợp tác</h3>
+          <p>Gửi thông tin để kết nối, trao đổi ý kiến và tìm kiếm cơ hội hợp tác.</p>
+        </div>
+      </div>
+
+      <section id="about">
+        <h2>Thông Tin Cá Nhân</h2>
+        <p>Họ tên: <strong>Phan Trọng Hiển</strong></p>
+        <p>Quê quán: Tiền Giang</p>
+        <p>Ngành học: Kỹ thuật phần mềm (CNTT)</p>
+        <p>Năm học: Năm 2</p>
+        <p><a href="https://guns.lol/lulu_mii">Social Media</a></p>
+      </section>
+
+      <section id="goals">
+        <h2>Mục Tiêu Học Kỳ Này</h2>
+        <ol>
+          <li>Giữ vững điểm GPA trên 3.6</li>
+          <li>Hoàn thành nhiều tín chỉ nhất có thể</li>
+          <li>Hoàn thành các môn kỹ năng mềm máy tính</li>
+        </ol>
+      </section>
+
+      <section id="api-demo" class="api-section">
+        <h2>Thực hành Fetch API</h2>
+        <div class="api-card">
+          <h3>Danh sách người dùng</h3>
+          <p id="users-status" role="status" aria-live="polite">Đang tải danh sách người dùng...</p>
+          <ul id="users-list" class="users-list"></ul>
+        </div>
+
+        <div class="api-card">
+          <h3>Tạo bài viết</h3>
+          <form id="post-form">
+            <label for="post-title">Tiêu đề</label>
+            <input id="post-title" name="title" type="text" required />
+
+            <label for="post-body">Nội dung</label>
+            <textarea id="post-body" name="body" rows="5" required></textarea>
+
+            <button class="btn-primary" type="submit">Gửi bài viết</button>
+          </form>
+          <p id="post-status" role="status" aria-live="polite"></p>
+          <div id="created-post" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <address>
+        Địa chỉ: Tiền Giang<br />
+        Email: <a href="mailto:phantronghien11b2@gmail.com">phantronghien11b2@gmail.com</a><br />
+        Điện thoại: <a href="tel:+84987654321">0936633230</a>
+      </address>
+      <p>&copy; 2026 Phan Trọng Hiển. All rights reserved. Cập nhật <time datetime="2026-06-01">01/06/2026</time>.</p>
+    </footer>
+
+    <script>
+      document.addEventListener('mousemove', (event) => {
+        const x = (event.clientX / window.innerWidth - 0.5) * 24;
+        const y = (event.clientY / window.innerHeight - 0.5) * 24;
+        document.body.style.setProperty('--move-x', `${x}px`);
+        document.body.style.setProperty('--move-y', `${y}px`);
+      });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/async-demo.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phan Trọng Hiển | Liên hệ và gửi thông tin kết nối</title>
+    <meta name="description" content="Gửi thông tin liên hệ đến Phan Trọng Hiển qua biểu mẫu có kiểm tra dữ liệu, lựa chọn kênh kết nối và nội dung trao đổi rõ ràng." />
+    <meta property="og:title" content="Phan Trọng Hiển | Liên hệ" />
+    <meta property="og:description" content="Gửi lời nhắn và thông tin liên hệ đến Phan Trọng Hiển qua biểu mẫu trực tuyến." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h1>Phan Trọng Hiển</h1>
+          <p>Tôi là sinh viên năm 2 ngành Kỹ thuật phần mềm, đang tìm hiểu và phát triển bản thân qua các môn học cũng như kỹ năng mềm.</p>
+        </div>
+
+        <nav class="nav-links">
+          <a href="index.html">Trang chủ</a>
+          <a href="about.html">Giới thiệu</a>
+          <a href="contact.html">Liên hệ</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Nếu bạn muốn trao đổi hoặc hợp tác, hãy gửi tin nhắn qua biểu mẫu bên dưới.</p>
+      </section>
+
+      <section>
+        <h2>Thông tin liên hệ</h2>
+        <ul>
+          <li>Email: <a href="mailto:phantronghien11b2@gmail.com">phantronghien11b2@gmail.com</a></li>
+          <li>Địa chỉ: Tiền Giang</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Form liên hệ</h2>
+        <form>
+          <fieldset>
+            <legend>Thông tin cá nhân</legend>
+
+            <label for="name">Họ và tên:</label><br />
+            <input type="text" id="name" name="name" required minlength="2" /><br /><br />
+
+            <label for="birthdate">Ngày sinh:</label><br />
+            <input type="date" id="birthdate" name="birthdate" /><br /><br />
+
+            <label for="university">Trường đại học:</label><br />
+            <input type="text" id="university" name="university" list="university-suggestions" /><br /><br />
+            <datalist id="university-suggestions">
+              <option value="Đại học Tiền Giang"></option>
+              <option value="Đại học Cần Thơ"></option>
+              <option value="Đại học Quốc gia Thành phố Hồ Chí Minh"></option>
+              <option value="Đại học Bách khoa Hà Nội"></option>
+            </datalist>
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="phone">Điện thoại:</label><br />
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,11}" required/>
+          </fieldset>
+
+          <fieldset>
+            <legend>Nội dung liên hệ</legend>
+
+            <label for="subject">Chủ đề:</label><br />
+            <select id="subject" name="subject">
+              <option value="question">Hỏi đáp</option>
+              <option value="feedback">Góp ý</option>
+              <option value="collaboration">Hợp tác</option>
+            </select><br /><br />
+
+            <span>Kênh liên hệ:</span><br />
+            <input type="radio" id="channel-email" name="channel" value="email" />
+            <label for="channel-email">Email</label><br />
+            <input type="radio" id="channel-phone" name="channel" value="điện thoại" />
+            <label for="channel-phone">Điện thoại</label><br />
+            <input type="radio" id="channel-zalo" name="channel" value="zalo" />
+            <label for="channel-zalo">Zalo</label><br /><br />
+
+            <label for="message">Tin nhắn:</label><br />
+            <textarea id="message" name="message" rows="5" cols="40" required minlength="10"></textarea><br /><br />
+
+            <input type="checkbox" id="agree" name="agree" required />
+            <label for="agree">Tôi đồng ý với việc sử dụng thông tin liên hệ.</label><br /><br />
+
+            <button type="submit">Gửi</button>
+            <button type="reset">Xoá</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <address>
+        Địa chỉ: Tiền Giang<br />
+        Email: <a href="mailto:phantronghien11b2@gmail.com">phantronghien11b2@gmail.com</a><br />
+        Điện thoại: <a href="tel:+84987654321">0936633230</a>
+      </address>
+      <p>&copy; 2026 Phan Trọng Hiển. All rights reserved. Cập nhật <time datetime="2026-06-01">01/06/2026</time>.</p>
+    </footer>
+
+    <script>
+      document.addEventListener('mousemove', (event) => {
+        const x = (event.clientX / window.innerWidth - 0.5) * 24;
+        const y = (event.clientY / window.innerHeight - 0.5) * 24;
+        document.body.style.setProperty('--move-x', `${x}px`);
+        document.body.style.setProperty('--move-y', `${y}px`);
+      });
+    </script>
+  </body>
+</html>

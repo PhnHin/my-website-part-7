@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+@media (min-width: 768px) {
+  .page-layout {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+
+  .sidebar {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 240px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .site-header {
+    padding-top: 28px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .hero {
+    min-height: 220px;
+    padding: 28px 16px;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+  }
+}

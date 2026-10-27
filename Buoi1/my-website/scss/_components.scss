@@ -1,0 +1,103 @@
+@use 'variables' as *;
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+@mixin card-style() {
+  padding: 24px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(203, 213, 225, 0.3);
+  border-radius: $radius;
+  box-shadow: $shadow;
+}
+
+.navbar {
+  @include flex-center;
+  position: relative;
+  justify-content: space-between;
+  gap: $spacing;
+  padding: 18px $spacing;
+  background: rgba(14, 165, 233, 0.18);
+  border: 1px solid rgba(14, 165, 233, 0.55);
+  border-radius: $radius;
+  box-shadow: $shadow;
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  color: $color-text;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.logo h1 {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: 0.04em;
+}
+
+.logo p {
+  max-width: 900px;
+  margin: 14px 0 0;
+  color: $color-muted;
+}
+
+.nav-links {
+  @include flex-center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.nav-links a {
+  padding: 10px 18px;
+  border: 1px solid rgba(203, 213, 225, 0.2);
+  border-radius: 999px;
+  color: $color-text;
+  font-weight: 700;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: linear-gradient(135deg, $color-primary, $color-secondary);
+    color: $color-text;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(14, 165, 233, 0.25);
+  }
+}
+
+.card {
+  @include card-style;
+  flex: 1;
+  min-width: 250px;
+
+  h3 {
+    margin-top: 0;
+    color: $color-text;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 12px 24px;
+  color: $color-text;
+  background: linear-gradient(135deg, $color-primary, $color-secondary);
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(14, 165, 233, 0.3);
+  }
+}
